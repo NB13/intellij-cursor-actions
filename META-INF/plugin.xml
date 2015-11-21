@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+    <id>org.metelsky.intellij.plugin.eval</id>
+    <name>CursorActions</name>
+    <version>1.0</version>
+    <vendor email="sasha.metelsky@gmail.com">Alexander Metelsky</vendor>
+
+    <description><![CDATA[
+      - Replace selected expression with evaluated value
+      - Replace selected text with cursor index
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <action id="org.metelsky.intellij.plugins.EvalAction" class="org.metelsky.intellij.plugins.EvalAction"
+                text="Eval Action" description="Eval expression">
+            <keyboard-shortcut first-keystroke="control shift alt E" keymap="$default"/>
+        </action>
+        <action id="org.metelsky.intellij.plugins.NumerateAction" class="org.metelsky.intellij.plugins.NumerateAction"
+                text="Numerate Action" description="Numerate cursors">
+            <keyboard-shortcut first-keystroke="control shift alt O" keymap="$default"/>
+        </action>
+    </actions>
+
+</idea-plugin>
