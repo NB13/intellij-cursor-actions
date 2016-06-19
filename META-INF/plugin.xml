@@ -26,12 +26,11 @@
         <!-- Add your extensions here -->
     </extensions>
 
-    <application-components>
-        <!-- Add your application components here -->
-    </application-components>
-
     <project-components>
         <!-- Add your project components here -->
+        <component>
+            <implementation-class>org.metelsky.intellij.plugins.ImageFixTest</implementation-class>
+        </component>
     </project-components>
 
     <actions>
@@ -43,6 +42,11 @@
                 text="Numerate Action" description="Numerate cursors">
             <keyboard-shortcut first-keystroke="control shift alt O" keymap="$default"/>
         </action>
+        <action id="org.metelsky.intellij.plugins.TimeConvertAction" class="org.metelsky.intellij.plugins.TimeConvertAction"
+                text="Time Convert Action" description="Convert time between unix time and ISO 8601">
+            <keyboard-shortcut first-keystroke="control shift alt A" keymap="$default"/>
+        </action>
+
     </actions>
 
 </idea-plugin>
